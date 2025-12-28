@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azriel Jasa - Biro Jasa STNK, BPKB, SIM Terpercata Bekasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .navbar-solid {
+            background-color: #1E293B;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        #mobile-menu.active {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-[4px] z-[9999] pointer-events-none">
+      <div id="scroll-progress" class="h-full w-0 bg-yellow-500 transition-[width] duration-100"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 group">
+        <!-- Progress Bar -->
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-[120px] h-[50px]">
+                        <img src="./assets/logo.png" alt="Azriel Jasa" class="w-full h-auto object-contain rounded-lg">
+                    </div>
+
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="layanan.html" class="text-white hover:text-yellow-400 transition">Layanan</a>
+                    <a href="harga.html" class="text-white hover:text-yellow-400 transition">Harga</a>
+                    <a href="tentang.html" class="text-white hover:text-yellow-400 transition">Tentang Kami</a>
+                    <a href="testimoni.html" class="text-white hover:text-yellow-400 transition">Testimoni</a>
+                    <a href="galeri.html" class="text-white hover:text-yellow-400 transition">Galeri</a>
+                    <a href="hubungi.html" class="text-white hover:text-yellow-400 transition">Hubungi Kami</a>
+                </div>
+
+                <a href="hubungi.html" class="hidden md:block bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                    Konsultasi
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="layanan.html" class="text-white hover:text-yellow-400 transition">Layanan</a>
+                    <a href="harga.html" class="text-white hover:text-yellow-400 transition">Harga</a>
+                    <a href="tentang.html" class="text-white hover:text-yellow-400 transition">Tentang Kami</a>
+                    <a href="testimoni.html" class="text-white hover:text-yellow-400 transition">Testimoni</a>
+                    <a href="galeri.html" class="text-white hover:text-yellow-400 transition">Galeri</a>
+                    <a href="hubungi.html" class="text-white hover:text-yellow-400 transition">Hubungi Kami</a>
+                    <a href="hubungi.html" class="bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold text-center">
+                        Konsultasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+  <section class="relative h-[85vh] min-h-[600px] overflow-hidden">
+
+  <!-- BACKGROUND CAROUSEL -->
+  <div class="absolute inset-0">
+    <div class="hero-slide active">
+      <img src="./assets/hero3.png" class="w-full h-full object-center" alt="Layanan Dokumen Kendaraan">
+      <div class="absolute inset-0 bg-slate-900/60"></div>
+    </div>
+    <div class="hero-slide">
+      <img src="./assets/hero1.jpeg" class="w-full h-full object-cover" alt="Kantor Pelayanan Azriel Jasa">
+      <div class="absolute inset-0 bg-slate-900/60"></div>
+    </div>
+    <div class="hero-slide">
+      <img src="./assets/hero3.png" class="w-full h-full object-center" alt="Tim Profesional Melayani Klien">
+      <div class="absolute inset-0 bg-slate-900/60"></div>
+    </div>
+  </div>
+
+  <!-- STATIC HERO CONTENT -->
+  <div class="relative z-20 flex items-center justify-center h-full">
+    <div class="text-center text-white max-w-4xl px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+       Solusi Cepat & Terpercaya untuk<br>Dokumen Kendaraan Anda
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-gray-200">
+        Kami membantu pengurusan STNK, BPKB, SIM, dan Paspor dengan proses yang aman, legal, dan bebas ribet.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="hubungi.html" class="bg-yellow-400 text-slate-800 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:scale-105 hover:shadow-lg transition-all duration-300 transform">
+          Hubungi Kami
+        </a>
+        <a href="harga.html" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-800 hover:scale-105 transition-all duration-300 transform">
+          Lihat Harga
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- DOTS -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-30">
+    <button class="carousel-dot w-3 h-3 rounded-full bg-yellow-400"></button>
+    <button class="carousel-dot w-3 h-3 rounded-full bg-white/50"></button>
+    <button class="carousel-dot w-3 h-3 rounded-full bg-white/50"></button>
+  </div>
+
+</section>
+
+
+    <!-- Counter Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="fade-in">
+                    <div class="text-5xl font-bold text-yellow-400 mb-2">
+                        <span class="counter" data-target="1200">0</span>+
+                    </div>
+                    <div class="text-gray-600 text-lg">Pelanggan Terpuaskan</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-5xl font-bold text-yellow-400 mb-2">
+                        <span class="counter" data-target="4.9">0</span>/5
+                    </div>
+                    <div class="text-gray-600 text-lg">Rating Kepuasan</div>
+                </div>
+                <div class="fade-in">
+                    <div class="text-5xl font-bold text-yellow-400 mb-2">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <div class="text-gray-600 text-lg">Legal & Aman</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="./assets/hero3.png" alt="Azriel Jasa" class="rounded-lg shadow-lg w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+                        Mengapa Memilih Azriel Jasa?
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Kami adalah biro jasa terpercaya dengan pengalaman lebih dari 10 tahun dalam pengurusan dokumen resmi. Komitmen kami adalah memberikan pelayanan terbaik dengan proses yang legal, aman, dan transparan.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Proses cepat dan efisien</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                            <span class="text-gray-600">100% legal dan resmi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Harga transparan tanpa biaya tersembunyi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-yellow-400 mt-1 mr-3"></i>
+                            <span class="text-gray-600">Konsultasi gratis sebelum pemesanan</span>
+                        </li>
+                    </ul>
+                    <a href="tentang.html" class="inline-block bg-transparent text-black border-2 border-black px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 hover:text-white hover:shadow-lg transition-all duration-300 group">
+                        Selengkapnya
+                              <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Layanan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kami menyediakan berbagai layanan pengurusan dokumen resmi dengan proses yang mudah dan terpercaya
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- STNK Card -->
+                <div class="group bg-white p-8 rounded-xl shadow-lg border border-slate-100 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors duration-300 relative z-10">
+                        <i class="fas fa-car text-3xl text-yellow-500 group-hover:text-slate-800 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-yellow-500 transition-colors">STNK</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Layanan cepat untuk perpanjangan STNK tahunan, 5 tahunan, balik nama, hingga mutasi kendaraan antar daerah.
+                    </p>
+                    <a href="layanan.html#stnk" class="inline-flex items-center text-slate-800 font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                        Selengkapnya <i class="fas fa-arrow-right ml-2 text-yellow-400"></i>
+                    </a>
+                </div>
+
+                <!-- BPKB Card -->
+                <div class="group bg-white p-8 rounded-xl shadow-lg border border-slate-100 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors duration-300 relative z-10">
+                        <i class="fas fa-file-alt text-3xl text-yellow-500 group-hover:text-slate-800 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-yellow-500 transition-colors">BPKB</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Pengurusan BPKB hilang, rusak, duplikat, hingga perubahan data kepemilikan dengan proses aman & legal.
+                    </p>
+                    <a href="layanan.html#bpkb" class="inline-flex items-center text-slate-800 font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                        Selengkapnya <i class="fas fa-arrow-right ml-2 text-yellow-400"></i>
+                    </a>
+                </div>
+
+                <!-- SIM Card -->
+                <div class="group bg-white p-8 rounded-xl shadow-lg border border-slate-100 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors duration-300 relative z-10">
+                        <i class="fas fa-id-card text-3xl text-yellow-500 group-hover:text-slate-800 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-yellow-500 transition-colors">SIM</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Bantu proses pembuatan SIM baru, perpanjangan, peningkatan golongan, hingga SIM Internasional.
+                    </p>
+                    <a href="layanan.html#sim" class="inline-flex items-center text-slate-800 font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                        Selengkapnya <i class="fas fa-arrow-right ml-2 text-yellow-400"></i>
+                    </a>
+                </div>
+
+                <!-- Paspor Card -->
+                <div class="group bg-white p-8 rounded-xl shadow-lg border border-slate-100 hover:border-yellow-400 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-yellow-400/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 transition-colors duration-300 relative z-10">
+                        <i class="fas fa-passport text-3xl text-yellow-500 group-hover:text-slate-800 transition-colors duration-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-yellow-500 transition-colors">Paspor</h3>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Layanan pembuatan paspor baru, perpanjangan, paspor hilang atau rusak untuk keperluan umroh/wisata.
+                    </p>
+                    <a href="layanan.html#paspor" class="inline-flex items-center text-slate-800 font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                        Selengkapnya <i class="fas fa-arrow-right ml-2 text-yellow-400"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="layanan.html" class="inline-block bg-transparent text-black border-2 border-black px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 hover:text-white hover:shadow-lg transition-all duration-300 group">
+                        Lihat Semua Layanan
+                              <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Harga Transparan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    Jaminan harga terbaik tanpa biaya tersembunyi. Kami menawarkan paket layanan yang kompetitif dan komprehensif untuk setiap kebutuhan dokumen Anda.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Card 1 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative border border-gray-100 items-start flex flex-col">
+                    <!-- <div class="mb-4">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold tracking-wide">Standard</span>
+                    </div> -->
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">Perpanjangan STNK</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-slate-800">Rp 250.000</span>
+                        <span class="text-gray-500 ml-2">/ mulai dari</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow w-full">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-500 text-sm"></i>
+                            </span>
+                            Proses Cepat 1-2 Hari Kerja
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-500 text-sm"></i>
+                            </span>
+                            Cek Fisik Kendaraan
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-500 text-sm"></i>
+                            </span>
+                            Konsultasi Gratis
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Azriel%20Jasa,%20saya%20tertarik%20dengan%20Jasa%20Perpanjangan%20STNK" class="w-full block text-center bg-slate-100 text-slate-800 font-bold py-3 px-6 rounded-xl hover:bg-slate-800 hover:text-white transition-all duration-300">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Card 2 (Popular) -->
+                <div class="group bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative border-2 border-yellow-400 items-start flex flex-col z-10 scale-105 md:scale-105">
+                    <!-- <div class="absolute top-0 right-0 transform translate-x-3 -translate-y-3">
+                         <span class="inline-block px-4 py-1 rounded-full bg-yellow-400 text-slate-900 text-xs font-bold uppercase tracking-wider shadow-md">Paling Laris</span>
+                    </div> -->
+                    <!-- <div class="mb-4">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-yellow-100 text-yellow-700 text-sm font-semibold tracking-wide">Recommended</span>
+                    </div> -->
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">SIM Baru</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-slate-800">Rp 350.000</span>
+                        <span class="text-gray-500 ml-2">/ mulai dari</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow w-full">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-600 text-sm"></i>
+                            </span>
+                            Proses 1 Hari Selesai
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-600 text-sm"></i>
+                            </span>
+                            Termasuk Tes Kesehatan
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-600 text-sm"></i>
+                            </span>
+                            Free Foto & Sidik Jari
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Azriel%20Jasa,%20saya%20tertarik%20dengan%20Jasa%20Pembuatan%20SIM" class="w-full block text-center bg-yellow-400 text-slate-900 font-bold py-3 px-6 rounded-xl hover:bg-yellow-500 hover:shadow-lg transition-all duration-300">
+                        Pesan Sekarang
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 relative border border-gray-100 items-start flex flex-col">
+                    <!-- <div class="mb-4">
+                        <span class="inline-block px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm font-semibold tracking-wide">Premium</span>
+                    </div> -->
+                    <h3 class="text-2xl font-bold text-slate-800 mb-2">BPKB</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-slate-800">Rp 850.000</span>
+                        <!-- <span class="text-gray-500 ml-2">/ paket lengkap</span> -->
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-grow w-full">
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-500 text-sm"></i>
+                            </span>
+                            Proses 5-7 Hari Kerja
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-500 text-sm"></i>
+                            </span>
+                            Bantuan Dokumen Lengkap
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <span class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i class="fas fa-check text-yellow-500 text-sm"></i>
+                            </span>
+                            Layanan Antar Jemput
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Azriel%20Jasa,%20saya%20tertarik%20dengan%20Jasa%20Pembuatan%20Paspor" class="w-full block text-center bg-slate-100 text-slate-800 font-bold py-3 px-6 rounded-xl hover:bg-slate-800 hover:text-white transition-all duration-300">
+                        Pesan Sekarang
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="harga.html" class="inline-flex items-center justify-center bg-transparent border-2 border-slate-800 text-slate-800 px-8 py-3 rounded-lg font-bold hover:bg-slate-800 hover:text-white transition-all duration-300 group">
+                    Lihat Daftar Harga Lengkap
+                    <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Preview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Testimoni Pelanggan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Kepuasan pelanggan adalah prioritas utama kami
+                </p>
+            </div>
+
+            <div class="testimonial-carousel overflow-hidden relative mb-12 py-4">
+                <div id="testimonial-track" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Testimonial 1 -->
+                    <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                        <div class="bg-slate-50 p-8 rounded-lg h-full shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "Pelayanan sangat memuaskan! Proses perpanjangan STNK cepat dan tidak ribet. Harga juga transparan tanpa biaya tambahan."
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-slate-800 font-bold">BW</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-slate-800">Budi Wibowo</div>
+                                    <div class="text-sm text-gray-500">Jakarta Selatan</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                        <div class="bg-slate-50 p-8 rounded-lg h-full shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "Recommended banget! Tim sangat profesional dan responsif. Pembuatan paspor saya selesai lebih cepat dari estimasi."
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-slate-800 font-bold">SP</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-slate-800">Siti Paramitha</div>
+                                    <div class="text-sm text-gray-500">Tangerang</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="w-full md:w-1/3 flex-shrink-0 px-4">
+                        <div class="bg-slate-50 p-8 rounded-lg h-full shadow-sm hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "Terima kasih Azriel Jasa! Urusan SIM dan STNK jadi mudah. Staff ramah dan selalu update progress."
+                            </p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-slate-800 font-bold">RH</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-slate-800">Rizki Hermawan</div>
+                                    <div class="text-sm text-gray-500">Bekasi</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Indicators -->
+                <div class="flex justify-center mt-6 space-x-2" id="testimonial-indicators">
+                    <!-- Indicators will be added by JS -->
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="testimoni.html" class="inline-block bg-transparent text-black border-2 border-black px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 hover:text-white hover:shadow-lg transition-all duration-300 group">
+                        Lihat Semua Testimoni
+                              <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <!-- Gallery Preview -->
+    <section class="py-24 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 relative">
+                <!-- <span class="text-yellow-500 font-bold uppercase tracking-wider text-sm mb-2 block">Dokumentasi</span> -->
+                <h2 class="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Galeri Aktivitas</h2>
+                <!-- <div class="w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div> -->
+                <p class="text-gray-600 max-w-2xl mx-auto mt-6 text-lg">
+                    Dokumentasi proses kerja dan pelayanan profesional tim Azriel Jasa.
+                </p>
+            </div>
+
+            <!-- Bento Grid Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-auto md:h-[600px] mb-12">
+                
+                <!-- Item 1 (Large) -->
+                <div class="group relative md:col-span-2 md:row-span-2 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="./assets/galeri4.jpeg" alt="Layanan Pelanggan Utama" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                        <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <h3 class="text-white text-2xl font-bold mb-2">BPKB</h3>
+                            <!-- <p class="text-gray-200 text-sm">Tim kami melayani dengan sepenuh hati di kantor pusat.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="./assets/galeri2.jpeg" alt="Konsultasi Dokumen" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl transform scale-50 group-hover:scale-100 transition-transform duration-500"></i>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group relative md:col-span-1 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="./assets/galeri3.jpeg" alt="Proses Cepat" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out">
+                    <div class="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                        <i class="fas fa-search-plus text-white text-3xl transform scale-50 group-hover:scale-100 transition-transform duration-500"></i>
+                    </div>
+                </div>
+
+                <!-- Item 4 (Wide) -->
+                <div class="group relative md:col-span-2 md:row-span-1 rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="./assets/galeri1.jpeg" alt="Tim Profesional" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out object-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                         <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <!-- <h3 class="text-white text-lg font-bold">Tim Solid & Berpengalaman</h3> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <a href="galeri.html" class="inline-block bg-transparent text-black border-2 border-black px-8 py-3 rounded-lg font-semibold hover:bg-slate-800 hover:text-white hover:shadow-lg transition-all duration-300 group">
+                        Lihat Galeri Lengkap
+                              <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Preview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+                    Konsultasi Kebutuhan Anda
+                </h2>
+                <p class="text-gray-600 mb-8 text-lg">
+                    Hubungi kami sekarang untuk konsultasi gratis dan dapatkan solusi terbaik untuk kebutuhan dokumen Anda
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="hubungi.html" class="bg-yellow-400 text-slate-800 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                        Hubungi Kami Sekarang
+                    </a>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-600 transition flex items-center justify-center">
+                        <i class="fab fa-whatsapp mr-2"></i>
+                        WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-[120px]">
+                            <img src="./assets/logo.png" alt="Azriel Jasa" class="w-full h-auto object-contain rounded-lg">
+                        </div>
+                        <!-- <span class="font-bold text-xl">Azriel Jasa</span> -->
+                    </div>
+                    <p class="text-gray-400">
+                        Biro jasa terpercaya untuk pengurusan dokumen resmi dengan proses legal, aman, dan transparan.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="layanan.html#stnk" class="text-gray-400 hover:text-yellow-400 transition">STNK</a></li>
+                        <li><a href="layanan.html#bpkb" class="text-gray-400 hover:text-yellow-400 transition">BPKB</a></li>
+                        <li><a href="layanan.html#sim" class="text-gray-400 hover:text-yellow-400 transition">SIM</a></li>
+                        <li><a href="layanan.html#paspor" class="text-gray-400 hover:text-yellow-400 transition">Paspor</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Navigasi</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-yellow-400 transition">Tentang Kami</a></li>
+                        <li><a href="harga.html" class="text-gray-400 hover:text-yellow-400 transition">Harga</a></li>
+                        <li><a href="testimoni.html" class="text-gray-400 hover:text-yellow-400 transition">Testimoni</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-yellow-400 transition">Galeri</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Kontak</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400"> Blk. C5 No.20, Kertamukti, Kec. Cibitung, Kabupaten Bekasi, Jawa Barat 17520</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">0812-1933-1327</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">azrieljasa@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Azriel Jasa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

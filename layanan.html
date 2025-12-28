@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan - Azriel Jasa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-solid {
+            background-color: #1E293B;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 1000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-[4px] z-[9999] pointer-events-none">
+      <div id="scroll-progress" class="h-full w-0 bg-yellow-500 transition-[width] duration-100"></div>
+    </div>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 navbar-solid transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-[120px]">
+                        <img src="./assets/logo.png" alt="Azriel Jasa" class="w-full h-auto object-contain rounded-lg">
+                    </div>
+                    <!-- <span class="text-white font-bold text-xl">Azriel Jasa</span> -->
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="layanan.html" class="text-yellow-400">Layanan</a>
+                    <a href="harga.html" class="text-white hover:text-yellow-400 transition">Harga</a>
+                    <a href="tentang.html" class="text-white hover:text-yellow-400 transition">Tentang Kami</a>
+                    <a href="testimoni.html" class="text-white hover:text-yellow-400 transition">Testimoni</a>
+                    <a href="galeri.html" class="text-white hover:text-yellow-400 transition">Galeri</a>
+                    <a href="hubungi.html" class="text-white hover:text-yellow-400 transition">Hubungi Kami</a>
+                </div>
+
+                <a href="hubungi.html" class="hidden md:block bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                    Konsultasi
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="layanan.html" class="text-yellow-400">Layanan</a>
+                    <a href="harga.html" class="text-white hover:text-yellow-400 transition">Harga</a>
+                    <a href="tentang.html" class="text-white hover:text-yellow-400 transition">Tentang Kami</a>
+                    <a href="testimoni.html" class="text-white hover:text-yellow-400 transition">Testimoni</a>
+                    <a href="galeri.html" class="text-white hover:text-yellow-400 transition">Galeri</a>
+                    <a href="hubungi.html" class="text-white hover:text-yellow-400 transition">Hubungi Kami</a>
+                    <a href="hubungi.html" class="bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold text-center">
+                        Konsultasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-16 bg-slate-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Layanan Kami</h1>
+            <p class="text-xl text-gray-300">Berbagai layanan pengurusan dokumen resmi untuk kemudahan Anda</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            
+           
+            <div class="flex justify-center mb-12 flex-wrap gap-4">
+                <span class="px-6 py-2 bg-yellow-400 text-slate-800 rounded-full font-bold shadow-lg cursor-pointer">Semua Layanan</span>
+                <span class="px-6 py-2 bg-transparent text-black border-2 border-black rounded-full font-semibold hover:bg-slate-800 hover:text-white hover:shadow-lg transition-all duration-300 group cursor-pointer">Kendaraan (STNK/BPKB)</span>
+                <span class="px-6 py-2 bg-transparent text-black border-2 border-black rounded-full font-semibold hover:bg-slate-800 hover:text-white hover:shadow-lg transition-all duration-300 group cursor-pointer">Surat Izin Mengemudi (SIM)</span>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Perpanjang STNK -->
+                <div class="service-card bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100">
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-4 text-blue-600 bg-yellow-400 ">
+                            <i class="fas fa-calendar-check text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Perpanjang STNK</h3>
+                        <p class="text-gray-500 text-sm">Layanan perpanjangan rutin</p>
+                    </div>
+                    <div class="p-6 flex-grow">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> STNK Tahunan
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> STNK 5 Tahun & Ganti Nopol
+                            </li>
+                        </ul>
+                       <button class="w-full text-left bg-slate-50 hover:bg-slate-100 p-4 rounded-lg flex justify-between items-center transition-colors"
+    onclick="toggleRequirement(this)">
+    <span class="font-semibold text-slate-700 text-sm">Lihat Persyaratan</span>
+    <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+</button>
+
+                        <div class=" requirement hidden mt-4 p-4 bg-yellow-50 rounded-lg text-sm transition-all duration-300">
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• KTP Asli & Fotocopy (Sesuai STNK)</li>
+                                <li>• STNK Asli</li>
+                                <li>• BPKB Asli (Khusus 5 Tahunan)</li>
+                                <li>• Cek Fisik Kendaraan (Khusus 5 Tahunan)</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20urus%20Perpanjang%20STNK" class="mt-4 block w-full text-center py-2.5 rounded-lg border-2 border-slate-200 text-slate-700 font-bold hover:border-yellow-500 hover:text-yellow-500 transition-colors">Konsultasi</a>
+                    </div>
+                </div>
+
+                <!-- 2. Balik Nama -->
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100 ">
+                        <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center mb-4 text-green-600 bg-yellow-400">
+                            <i class="fas fa-exchange-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Balik Nama</h3>
+                        <p class="text-gray-500 text-sm">Ganti kepemilikan kendaraan</p>
+                    </div>
+                    <div class="p-6 flex-grow">
+                         <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Wilayah (Satu Samsat)
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Mutasi Antar Samsat
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Mutasi Luar Daerah
+                            </li>
+                        </ul>
+                        <button class="w-full text-left bg-slate-50 hover:bg-slate-100 p-4 rounded-lg flex justify-between items-center transition-colors group-focus-within:bg-yellow-50" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="font-semibold text-slate-700 text-sm">Lihat Persyaratan</span>
+                            <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden mt-4 p-4 bg-yellow-50 rounded-lg text-sm transition-all duration-300">
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• BPKB & STNK Asli</li>
+                                <li>• KTP Pemilik Baru (Asli & Copy)</li>
+                                <li>• Kwitansi Jual Beli Bermaterai</li>
+                                <li>• Cek Fisik Kendaraan</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20urus%20Balik%20Nama" class="mt-4 block w-full text-center py-2.5 rounded-lg border-2 border-slate-200 text-slate-700 font-bold hover:border-yellow-500 hover:text-yellow-500 transition-colors">Konsultasi</a>
+                    </div>
+                </div>
+
+                <!-- 3. Pindah Alamat -->
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100">
+                        <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center mb-4 text-purple-600 bg-yellow-400">
+                            <i class="fas fa-map-marked-alt text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Pindah Alamat</h3>
+                        <p class="text-gray-500 text-sm">Mutasi alamat pemilik</p>
+                    </div>
+                    <div class="p-6 flex-grow">
+                         <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Pindah Wilayah
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Mutasi Antar Wilayah
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Mutasi Luar Daerah
+                            </li>
+                        </ul>
+                        <button class="w-full text-left bg-slate-50 hover:bg-slate-100 p-4 rounded-lg flex justify-between items-center transition-colors group-focus-within:bg-yellow-50" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="font-semibold text-slate-700 text-sm">Lihat Persyaratan</span>
+                            <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden mt-4 p-4 bg-yellow-50 rounded-lg text-sm transition-all duration-300">
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• BPKB & STNK Asli</li>
+                                <li>• KTP dengan Alamat Baru</li>
+                                <li>• Kartu Keluarga (KK)</li>
+                                <li>• Cek Fisik Kendaraan</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20urus%20Pindah%20Alamat" class="mt-4 block w-full text-center py-2.5 rounded-lg border-2 border-slate-200 text-slate-700 font-bold hover:border-yellow-500 hover:text-yellow-500 transition-colors">Konsultasi</a>
+                    </div>
+                </div>
+
+                <!-- 4. Dokumen Hilang -->
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100">
+                        <div class="w-14 h-14 bg-red-100 rounded-2xl flex items-center justify-center mb-4 text-yellow-600 bg-yellow-400">
+                            <i class="fas fa-exclamation-triangle text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">Dokumen Hilang</h3>
+                        <p class="text-gray-500 text-sm">Pengurusan STNK & BPKB Hilang</p>
+                    </div>
+                    <div class="p-6 flex-grow">
+                         <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Pengurusan STNK Hilang
+                            </li>
+                             <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Pengurusan BPKB Hilang
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Revisi Data BPKB
+                            </li>
+                        </ul>
+                        <button class="w-full text-left bg-slate-50 hover:bg-slate-100 p-4 rounded-lg flex justify-between items-center transition-colors group-focus-within:bg-yellow-50" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="font-semibold text-slate-700 text-sm">Lihat Persyaratan</span>
+                            <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden mt-4 p-4 bg-yellow-50 rounded-lg text-sm transition-all duration-300">
+                            <p class="font-semibold mb-1">STNK Hilang:</p>
+                            <ul class="space-y-1 text-slate-600 mb-2">
+                                <li>• BPKB Asli & KTP Asli</li>
+                                <li>• Surat Kehilangan Polisi</li>
+                            </ul>
+                            <p class="font-semibold mb-1">BPKB Hilang:</p>
+                            <ul class="space-y-1 text-slate-600">
+                                <li>• KTP & STNK Asli</li>
+                                <li>• Surat Kehilangan Polisi</li>
+                                <li>• Iklan Media Massa (Koran)</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20urus%20Dokumen%20Hilang" class="mt-4 block w-full text-center py-2.5 rounded-lg border-2 border-slate-200 text-slate-700 font-bold hover:border-red-500 hover:text-red-500 transition-colors">Konsultasi</a>
+                    </div>
+                </div>
+
+                <!-- 5. SIM A -->
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100">
+                        <div class="w-14 h-14 bg-yellow-100 rounded-2xl flex items-center justify-center mb-4 text-yellow-600 bg-yellow-400">
+                            <i class="fas fa-car-side text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">SIM A (Mobil)</h3>
+                        <p class="text-gray-500 text-sm">Surat Izin Mengemudi Roda 4</p>
+                    </div>
+                    <div class="p-6 flex-grow">
+                         <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Pembuatan SIM A Baru
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Perpanjangan SIM A
+                            </li>
+                        </ul>
+                        <button class="w-full text-left bg-slate-50 hover:bg-slate-100 p-4 rounded-lg flex justify-between items-center transition-colors group-focus-within:bg-yellow-50" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="font-semibold text-slate-700 text-sm">Lihat Persyaratan</span>
+                            <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden mt-4 p-4 bg-yellow-50 rounded-lg text-sm transition-all duration-300">
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• KTP Asli & Fotocopy</li>
+                                <li>• Surat Keterangan Sehat (Jasmani & Rohani)</li>
+                                <li>• SIM Asli (Untuk Perpanjangan)</li>
+                                <li>• Lulus Ujian Teori & Praktik (Untuk Baru)</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20urus%20SIM%20A" class="mt-4 block w-full text-center py-2.5 rounded-lg border-2 border-slate-200 text-slate-700 font-bold hover:border-yellow-400 hover:text-yellow-600 transition-colors">Konsultasi</a>
+                    </div>
+                </div>
+
+                <!-- 6. SIM C -->
+                <div class="bg-white rounded-xl shadow-lg border border-slate-100 hover:shadow-2xl transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="p-6 bg-slate-50 border-b border-slate-100">
+                        <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center mb-4 text-yellow-600 bg-yellow-400">
+                            <i class="fas fa-motorcycle text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-1">SIM C (Motor)</h3>
+                        <p class="text-gray-500 text-sm">Surat Izin Mengemudi Roda 2</p>
+                    </div>
+                    <div class="p-6 flex-grow">
+                         <ul class="space-y-3 mb-6">
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Pembuatan SIM C Baru
+                            </li>
+                            <li class="flex items-center text-slate-700">
+                                <i class="fas fa-check text-yellow-500 mr-3 text-sm"></i> Perpanjangan SIM C
+                            </li>
+                        </ul>
+                        <button class="w-full text-left bg-slate-50 hover:bg-slate-100 p-4 rounded-lg flex justify-between items-center transition-colors group-focus-within:bg-yellow-50" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('i').classList.toggle('rotate-180')">
+                            <span class="font-semibold text-slate-700 text-sm">Lihat Persyaratan</span>
+                            <i class="fas fa-chevron-down text-slate-400 text-xs transition-transform duration-300"></i>
+                        </button>
+                        <div class="hidden mt-4 p-4 bg-yellow-50 rounded-lg text-sm transition-all duration-300">
+                            <ul class="space-y-2 text-slate-600">
+                                <li>• KTP Asli & Fotocopy</li>
+                                <li>• Surat Keterangan Sehat (Jasmani & Rohani)</li>
+                                <li>• SIM Asli (Untuk Perpanjangan)</li>
+                                <li>• Lulus Ujian Teori & Praktik (Untuk Baru)</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20urus%20SIM%20C" class="mt-4 block w-full text-center py-2.5 rounded-lg border-2 border-slate-200 text-slate-700 font-bold hover:border-orange-500 hover:text-orange-500 transition-colors">Konsultasi</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-slate-800 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Butuh Bantuan Lebih Lanjut?</h2>
+            <p class="text-xl mb-8 text-gray-300">
+                Tim kami siap membantu Anda dengan konsultasi gratis
+            </p>
+            <a href="hubungi.html" class="inline-block bg-yellow-400 text-slate-800 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                Hubungi Kami Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-[120px]">
+                            <img src="./assets/logo.png" alt="Azriel Jasa" class="w-full h-auto object-contain rounded-lg">
+                        </div>
+                        <!-- <span class="font-bold text-xl">Azriel Jasa</span> -->
+                    </div>
+                    <p class="text-gray-400">
+                        Biro jasa terpercaya untuk pengurusan dokumen resmi dengan proses legal, aman, dan transparan.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="layanan.html#stnk" class="text-gray-400 hover:text-yellow-400 transition">STNK</a></li>
+                        <li><a href="layanan.html#bpkb" class="text-gray-400 hover:text-yellow-400 transition">BPKB</a></li>
+                        <li><a href="layanan.html#sim" class="text-gray-400 hover:text-yellow-400 transition">SIM</a></li>
+                        <li><a href="layanan.html#paspor" class="text-gray-400 hover:text-yellow-400 transition">Paspor</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Navigasi</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-yellow-400 transition">Tentang Kami</a></li>
+                        <li><a href="harga.html" class="text-gray-400 hover:text-yellow-400 transition">Harga</a></li>
+                        <li><a href="testimoni.html" class="text-gray-400 hover:text-yellow-400 transition">Testimoni</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-yellow-400 transition">Galeri</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Kontak</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400"> Blk. C5 No.20, Kertamukti, Kec. Cibitung, Kabupaten Bekasi, Jawa Barat 17520</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">0812-1933-1327</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">azrieljasa@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Azriel Jasa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

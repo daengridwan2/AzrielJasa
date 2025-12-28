@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni - Azriel Jasa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .navbar-solid {
+            background-color: #1E293B;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Marquee Animation */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            width: max-content;
+            animation: marquee 40s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-[4px] z-[9999] pointer-events-none">
+      <div id="scroll-progress" class="h-full w-0 bg-yellow-500 transition-[width] duration-100"></div>
+    </div>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 navbar-solid transition-all duration-300">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-[120px]">
+                        <img src="./assets/logo.png" alt="Azriel Jasa" class="w-full h-auto object-contain rounded-lg">
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="layanan.html" class="text-white hover:text-yellow-400 transition">Layanan</a>
+                    <a href="harga.html" class="text-white hover:text-yellow-400 transition">Harga</a>
+                    <a href="tentang.html" class="text-white hover:text-yellow-400 transition">Tentang Kami</a>
+                    <a href="testimoni.html" class="text-yellow-400">Testimoni</a>
+                    <a href="galeri.html" class="text-white hover:text-yellow-400 transition">Galeri</a>
+                    <a href="hubungi.html" class="text-white hover:text-yellow-400 transition">Hubungi Kami</a>
+                </div>
+
+                <a href="hubungi.html" class="hidden md:block bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
+                    Konsultasi
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-white hover:text-yellow-400 transition">Home</a>
+                    <a href="layanan.html" class="text-white hover:text-yellow-400 transition">Layanan</a>
+                    <a href="harga.html" class="text-white hover:text-yellow-400 transition">Harga</a>
+                    <a href="tentang.html" class="text-white hover:text-yellow-400 transition">Tentang Kami</a>
+                    <a href="testimoni.html" class="text-yellow-400">Testimoni</a>
+                    <a href="galeri.html" class="text-white hover:text-yellow-400 transition">Galeri</a>
+                    <a href="hubungi.html" class="text-white hover:text-yellow-400 transition">Hubungi Kami</a>
+                    <a href="hubungi.html" class="bg-yellow-400 text-slate-800 px-6 py-2 rounded-lg font-semibold text-center">
+                        Konsultasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modern Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-slate-900">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-slate-50 to-transparent opacity-10"></div>
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Happy Clients" class="absolute inset-0 w-full h-full object-cover opacity-10">
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-yellow-400/20 text-yellow-400 text-sm font-semibold mb-6 border border-yellow-400/30">
+                ⭐ Cerita Mereka
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Apa Kata Mereka Tentang <br class="hidden md:block"> <span class="text-yellow-400">Pelayanan Kami?</span>
+            </h1>
+            <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10">
+                Ribuan pelanggan telah terbantu dalam pengurusan dokumen kendaraan mereka. Simak pengalaman jujur mereka bersama Azriel Jasa.
+            </p>
+
+            <!-- Stats Floating Card -->
+            <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 md:p-8 animate-float">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-white/10">
+                    <div class="p-2">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1"><span class="counter" data-target="4.9">0</span>/5</div>
+                        <div class="flex justify-center space-x-1 text-yellow-400 text-xs mb-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <div class="text-gray-400 text-xs md:text-sm">Rating Rata-rata</div>
+                    </div>
+                    <div class="p-2">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1"><span class="counter" data-target="1200">0</span>+</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Total Review</div>
+                    </div>
+                    <div class="p-2">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1"><span class="counter" data-target="98">0</span>%</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Kepuasan Pelanggan</div>
+                    </div>
+                    <div class="p-2">
+                        <div class="text-3xl md:text-4xl font-bold text-white mb-1">24/7</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Support Layanan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Carousel Section (Marquee) -->
+    <section class="py-20 bg-slate-50 relative">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Testimoni Pelanggan</h2>
+                    <p class="text-gray-600">Kata mereka tentang pengalaman menggunakan jasa kami.</p>
+                </div>
+            </div>
+
+            <!-- Marquee Container -->
+            <div class="relative overflow-hidden group">
+                <!-- Fade Gradients -->
+                <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-slate-50 to-transparent z-10"></div>
+                <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-slate-50 to-transparent z-10"></div>
+
+                <!-- Scrolling Track -->
+                <div class="flex gap-6 animate-marquee">
+                    <!-- Original Cards -->
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">BW</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Budi Wibowo</h4>
+                                <p class="text-xs text-gray-500">Jakarta Selatan • STNK Tahunan</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Pelayanan sangat memuaskan! Proses perpanjangan STNK cepat dan tidak ribet. Saya tidak perlu antri di Samsat lagi."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">SP</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Siti Paramitha</h4>
+                                <p class="text-xs text-gray-500">Tangerang • Paspor 48 Hal</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Recommended banget! Tim sangat profesional dan responsif. Pembuatan paspor saya selesai lebih cepat dari estimasi."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">RH</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Rizki Hermawan</h4>
+                                <p class="text-xs text-gray-500">Bekasi • Mutasi Kendaraan</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Terima kasih Azriel Jasa! Urusan mutasi kendaraan jadi mudah. Staff ramah dan selalu update progress setiap hari."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">DS</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Desi Susanti</h4>
+                                <p class="text-xs text-gray-500">Depok • Balik Nama BPKB</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Sangat puas dengan layanan balik nama BPKB. Prosesnya tergolong cepat dokumen lengkap. Harga juga sesuai kesepakatan."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">AM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Ahmad Maulana</h4>
+                                <p class="text-xs text-gray-500">Bogor • SIM A Baru</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Pelayanan terbaik! Saya buat SIM baru, semuanya lancar dan dipandu dengan baik. CS sangat responsif."</p>
+                    </div>
+
+                     <!-- Duplicates for Marquee Loop -->
+                     <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">BW</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Budi Wibowo</h4>
+                                <p class="text-xs text-gray-500">Jakarta Selatan • STNK Tahunan</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Pelayanan sangat memuaskan! Proses perpanjangan STNK cepat dan tidak ribet. Saya tidak perlu antri di Samsat lagi."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">SP</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Siti Paramitha</h4>
+                                <p class="text-xs text-gray-500">Tangerang • Paspor 48 Hal</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Recommended banget! Tim sangat profesional dan responsif. Pembuatan paspor saya selesai lebih cepat dari estimasi."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">RH</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Rizki Hermawan</h4>
+                                <p class="text-xs text-gray-500">Bekasi • Mutasi Kendaraan</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Terima kasih Azriel Jasa! Urusan mutasi kendaraan jadi mudah. Staff ramah dan selalu update progress setiap hari."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">DS</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Desi Susanti</h4>
+                                <p class="text-xs text-gray-500">Depok • Balik Nama BPKB</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Sangat puas dengan layanan balik nama BPKB. Prosesnya tergolong cepat dokumen lengkap. Harga juga sesuai kesepakatan."</p>
+                    </div>
+
+                    <div class="w-[350px] md:w-[400px] flex-shrink-0 bg-white p-8 rounded-2xl shadow-lg border border-slate-100 relative group/card whitespace-normal">
+                        <div class="absolute top-6 right-8 text-6xl text-yellow-100 font-serif leading-none group-hover/card:text-yellow-200 transition">"</div>
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white font-bold text-lg shadow-md mr-4">AM</div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Ahmad Maulana</h4>
+                                <p class="text-xs text-gray-500">Bogor • SIM A Baru</p>
+                            </div>
+                        </div>
+                        <div class="flex text-yellow-400 text-sm mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed relative z-10">"Pelayanan terbaik! Saya buat SIM baru, semuanya lancar dan dipandu dengan baik. CS sangat responsif."</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Story CTA -->
+    <section class="py-20 bg-white border-t border-slate-100 animate-on-scroll">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-8 md:p-16 relative overflow-hidden text-center shadow-2xl">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <div class="w-20 h-20 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-8 shadow-glow">
+                        <i class="fas fa-comment-dots text-4xl text-slate-900"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Punya Pengalaman Seru?</h2>
+                    <p class="text-gray-300 text-lg mb-10">
+                        Bagikan cerita pengalaman Anda menggunakan layanan Azriel Jasa. Masukan Anda sangat berarti bagi kami untuk terus meningkatkan kualitas pelayanan.
+                    </p>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Azriel%20Jasa,%20saya%20ingin%20memberikan%20testimoni..." target="_blank" class="inline-flex items-center bg-yellow-400 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-yellow-500 transition transform hover:-translate-y-1 shadow-lg">
+                        <i class="fab fa-whatsapp text-2xl mr-3"></i> Kirim Testimoni
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 border-t border-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-[100px]">
+                            <img src="./assets/logo.png" alt="Azriel Jasa" class="w-full h-auto object-contain rounded-lg">
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Biro jasa terpercaya untuk pengurusan dokumen resmi dengan proses legal, aman, dan transparan.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white">Layanan Utama</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="layanan.html#stnk" class="text-gray-400 hover:text-yellow-400 transition">STNK</a></li>
+                        <li><a href="layanan.html#bpkb" class="text-gray-400 hover:text-yellow-400 transition">BPKB</a></li>
+                        <li><a href="layanan.html#sim" class="text-gray-400 hover:text-yellow-400 transition">SIM</a></li>
+                        <li><a href="layanan.html#paspor" class="text-gray-400 hover:text-yellow-400 transition">Paspor</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white">Navigasi</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-yellow-400 transition">Tentang Kami</a></li>
+                        <li><a href="harga.html" class="text-gray-400 hover:text-yellow-400 transition">Daftar Harga</a></li>
+                        <li><a href="testimoni.html" class="text-gray-400 hover:text-yellow-400 transition">Testimoni Klien</a></li>
+                        <li><a href="hubungi.html" class="text-gray-400 hover:text-yellow-400 transition">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg mb-4 text-white">Hubungi Kami</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">Blk. C5 No.20, Kertamukti, Kec. Cibitung, Bekasi, Jawa Barat 17520</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">0812-1933-1327</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-yellow-400"></i>
+                            <span class="text-gray-400">azrieljasa@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Azriel Jasa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50 animate-bounce-slow">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        // Counter Animation Logic
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    
+                    const isFloat = target % 1 !== 0; 
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        if(isFloat) {
+                             counter.innerText = (count + increment).toFixed(1);
+                        } else {
+                             counter.innerText = Math.ceil(count + increment);
+                        }
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger animation when stats section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, { threshold: 0.5 }); 
+
+        if(counters.length > 0) {
+             const statsSection = counters[0].closest('.grid'); 
+             if(statsSection) observer.observe(statsSection);
+        }
+    </script>
+    <style>
+        .animate-bounce-slow {
+            animation: bounce 3s infinite;
+        }
+        .shadow-glow {
+            box-shadow: 0 0 15px rgba(250, 204, 21, 0.5);
+        }
+    </style>
+</body>
+</html>

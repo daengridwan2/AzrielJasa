@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/icon.png" type="image/x-icon">
     <style>
         body { font-family: 'Poppins', sans-serif; }
         .navbar-solid { background-color: #1E293B; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -98,10 +99,10 @@
     <section class="sticky top-[72px] z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="container mx-auto px-4 py-4">
             <div class="flex flex-wrap justify-center gap-3" id="gallery-filters">
-                <button class="filter-btn active px-5 py-2 rounded-full border border-gray-200 text-gray-600 text-sm font-medium hover:border-yellow-400 hover:text-yellow-600 focus:outline-none" data-filter="all">
+                <!-- <button class="filter-btn active px-5 py-2 rounded-full border border-gray-200 text-gray-600 text-sm font-medium hover:border-yellow-400 hover:text-yellow-600 focus:outline-none" data-filter="all">
                     Semua
-                </button>
-                <button class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-gray-600 text-sm font-medium hover:border-yellow-400 hover:text-yellow-600 focus:outline-none" data-filter="office">
+                </button> -->
+                <!-- <button class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-gray-600 text-sm font-medium hover:border-yellow-400 hover:text-yellow-600 focus:outline-none" data-filter="office">
                     🏠 Active Office
                 </button>
                 <button class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-gray-600 text-sm font-medium hover:border-yellow-400 hover:text-yellow-600 focus:outline-none" data-filter="consumer">
@@ -109,7 +110,7 @@
                 </button>
                <button class="filter-btn px-5 py-2 rounded-full border border-gray-200 text-gray-600 text-sm font-medium hover:border-yellow-400 hover:text-yellow-600 focus:outline-none" data-filter="documents">
                     📄 Berkas Selesai
-                </button>
+                </button> -->
             </div>
         </div>
     </section>
@@ -127,11 +128,11 @@
                 <!-- Item: Office -->
                 <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="office">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600" alt="Office Activity" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./assets/galeri1.jpeg" alt="Office Activity" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Active Office</span>
-                        <h3 class="text-white font-semibold text-lg">Suasana Pelayanan Loket</h3>
+                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Pengurusan BPKB</span>
+                        <!-- <h3 class="text-white font-semibold text-lg">Suasana Pelayanan Loket</h3> -->
                     </div>
                 </div>
 
@@ -139,11 +140,11 @@
                 <!-- Item: Consumer -->
                 <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="consumer">
                     <div class="aspect-[4/3] overflow-hidden">
-                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=600" alt="Consumer" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                         <img src="./assets/galeri2.jpeg" alt="Consumer" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                        <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Konsumen</span>
-                        <h3 class="text-white font-semibold text-lg">Konsultasi Pajak Tahunan</h3>
+                        <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Pengurusan BPKB</span>
+                        <!-- <h3 class="text-white font-semibold text-lg">Konsultasi Pajak Tahunan</h3> -->
                     </div>
                 </div>
 
@@ -151,11 +152,11 @@
                  <!-- Item: Documents -->
                  <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="documents">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=600" alt="Documents" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./assets/galeri3.jpeg" alt="Documents" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
                          <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Berkas Selesai</span>
-                        <h3 class="text-white font-semibold text-lg">Tumpukan STNK Selesai</h3>
+                        <!-- <h3 class="text-white font-semibold text-lg">Tumpukan STNK Selesai</h3> -->
                     </div>
                 </div>
 
@@ -163,11 +164,11 @@
                 <!-- Item: Office 2 -->
                 <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="office">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600" alt="Office" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <img src="./assets/galeri4.jpeg" alt="Office" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Active Office</span>
-                        <h3 class="text-white font-semibold text-lg">Briefing Tim Lapangan</h3>
+                         <!-- <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Active Office</span>
+                        <h3 class="text-white font-semibold text-lg">Briefing Tim Lapangan</h3> -->
                     </div>
                 </div>
 
@@ -175,11 +176,11 @@
                 <!-- Item: Consumer 2 -->
                 <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="consumer">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Happy Client" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <!-- <img src="./assets/galeri5.jpeg" alt="Happy Client" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"> -->
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Konsumen</span>
-                        <h3 class="text-white font-semibold text-lg">Serah Terima BPKB</h3>
+                         <!-- <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Konsumen</span>
+                        <h3 class="text-white font-semibold text-lg">Serah Terima BPKB</h3> -->
                     </div>
                 </div>
 
@@ -187,11 +188,11 @@
                  <!-- Item: Documents 2 -->
                  <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="documents">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=600" alt="Docs" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <!-- <img src="./assets/galeri6.jpeg" alt="Docs" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"> -->
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Berkas Selesai</span>
-                        <h3 class="text-white font-semibold text-lg">Dokumen Siap Antar</h3>
+                         <!-- <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Berkas Selesai</span>
+                        <h3 class="text-white font-semibold text-lg">Dokumen Siap Antar</h3> -->
                     </div>
                 </div>
 
@@ -199,11 +200,11 @@
                 <!-- Item: Office 3 -->
                  <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="office">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=600" alt="Work" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <!-- <img src="./assets/galeri7.jpeg" alt="Work" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"> -->
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Active Office</span>
-                        <h3 class="text-white font-semibold text-lg">Kolaborasi Tim Admin</h3>
+                         <!-- <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Active Office</span>
+                        <h3 class="text-white font-semibold text-lg">Kolaborasi Tim Admin</h3> -->
                     </div>
                 </div>
 
@@ -211,11 +212,11 @@
                  <!-- Item: Documents 3 -->
                  <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="documents">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&q=80&w=600" alt="Stamps" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <!-- <img src="https://images.unsplash.com/photo-1616091216791-a5360b5fc78a?auto=format&fit=crop&q=80&w=600" alt="Stamps" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"> -->
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Berkas Selesai</span>
-                        <h3 class="text-white font-semibold text-lg">Validasi Akhir Dokumen</h3>
+                         <!-- <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Berkas Selesai</span>
+                        <h3 class="text-white font-semibold text-lg">Validasi Akhir Dokumen</h3> -->
                     </div>
                 </div>
 
@@ -223,11 +224,11 @@
                  <!-- Item: Consumer 3 -->
                  <div class="gallery-item group relative rounded-xl overflow-hidden shadow-lg cursor-pointer bg-white transition-all duration-300 transform opacity-100 scale-100" data-category="consumer">
                     <div class="aspect-[4/3] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="Handshake" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <!-- <img src="./assets/galeri8.jpeg" alt="Handshake" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700"> -->
                     </div>
                     <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent p-5 pt-12">
-                         <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Konsumen</span>
-                        <h3 class="text-white font-semibold text-lg">Deal Layanan Korporat</h3>
+                         <!-- <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Konsumen</span>
+                        <h3 class="text-white font-semibold text-lg">Deal Layanan Korporat</h3> -->
                     </div>
                 </div>
 

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="icon" href="./assets/icon.png" type="image/x-icon">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -106,9 +107,13 @@
                                 <i class="fas fa-id-card w-6"></i>
                                 <span>SIM</span>
                             </button>
-                            <button onclick="switchTab('paspor')" class="tab-btn w-auto md:w-full text-left px-5 py-3 rounded-lg font-semibold text-gray-600 hover:bg-white hover:text-slate-800 hover:shadow transition-all duration-300 flex items-center space-x-3" data-target="paspor">
+                            <!-- <button onclick="switchTab('paspor')" class="tab-btn w-auto md:w-full text-left px-5 py-3 rounded-lg font-semibold text-gray-600 hover:bg-white hover:text-slate-800 hover:shadow transition-all duration-300 flex items-center space-x-3" data-target="paspor">
                                 <i class="fas fa-passport w-6"></i>
                                 <span>Paspor</span>
+                            </button> -->
+                            <button onclick="switchTab('mutasi')" class="tab-btn w-auto md:w-full text-left px-5 py-3 rounded-lg font-semibold text-gray-600 hover:bg-white hover:text-slate-800 hover:shadow transition-all duration-300 flex items-center space-x-3" data-target="mutasi">
+                                <i class="fas fa-exchange-alt w-6"></i>
+                                <span>Mutasi</span>
                             </button>
                         </div>
                     </div>
@@ -130,16 +135,17 @@
                             <!-- Card 1 -->
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
                                 <div class="p-6 flex-grow">
-                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjangan Tahunan</h3>
-                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 250.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 1-2 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Cek fisik kendaraan</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Free konsultasi</li>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjang Tahunan</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 50.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-file-alt text-slate-400 mt-1 mr-2 text-xs"></i> STNK Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP Asli (Sesuai STNK)</li>
+                                        <li class="flex items-start"><i class="fas fa-book text-slate-400 mt-1 mr-2 text-xs"></i> BPKB Asli/Copy</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20STNK%20Tahunan" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20STNK%20Tahunan" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 2 -->
@@ -147,31 +153,36 @@
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjangan 5 Tahunan</h3>
                                     <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 450.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 2-3 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Ganti plat nomor</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Termasuk TNKB baru</li>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-file-alt text-slate-400 mt-1 mr-2 text-xs"></i> STNK Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP Asli Sesuai STNK</li>
+                                        <li class="flex items-start"><i class="fas fa-file-alt  text-slate-400 mt-1 mr-2 text-xs"></i> FC BPKB</li>
+                                        <li class="flex items-start"><i class="fas fa-car text-slate-400 mt-1 mr-2 text-xs"></i> Cek Fisik Kendaraan</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20STNK%205%20Tahunan" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20STNK%205%20Tahunan" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 3 -->
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
                                 <div class="p-6 flex-grow">
-                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Balik Nama Kendaraan</h3>
-                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 1.200.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 5-7 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Update data pemilik</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Gratis cek dokumen</li>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Ganti Plat Nomor</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 150.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-book text-slate-400 mt-1 mr-2 text-xs"></i>STNK Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-file-alt  text-slate-400 mt-1 mr-2 text-xs"></i>BPKB Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-receipt text-slate-400 mt-1 mr-2 text-xs"></i> Cek Fisik Kendaraan</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Balik%20Nama%20STNK" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Balik%20Nama%20STNK" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
 
@@ -190,14 +201,15 @@
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">BPKB Baru</h3>
                                     <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 800.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 7-10 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Bantuan lengkap dokumen</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Update progress berkala</li>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-file-invoice text-slate-400 mt-1 mr-2 text-xs"></i> Faktur Kendaraan</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> Fotokopi KTP & STNK</li>
+                                        <li class="flex items-start"><i class="fas fa-file-contract text-slate-400 mt-1 mr-2 text-xs"></i> Surat Ket. Dealer</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20BPKB%20Baru" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20BPKB%20Baru" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 2 -->
@@ -205,14 +217,15 @@
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">Duplikat BPKB</h3>
                                     <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 1.500.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 10-14 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Surat kehilangan polisi</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Cek fisik kendaraan</li>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-file-alt text-slate-400 mt-1 mr-2 text-xs"></i> Surat Kehilangan Polisi</li>
+                                        <li class="flex items-start"><i class="fas fa-newspaper text-slate-400 mt-1 mr-2 text-xs"></i> Bukti Iklan Media</li>
+                                        <li class="flex items-start"><i class="fas fa-search text-slate-400 mt-1 mr-2 text-xs"></i> Cek Fisik Kendaraan</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Duplikat%20BPKB" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Duplikat%20BPKB" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 3 -->
@@ -220,14 +233,15 @@
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">Balik Nama BPKB</h3>
                                     <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 1.800.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 7-14 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Update nama pemilik</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Cek kelengkapan dokumen</li>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-book text-slate-400 mt-1 mr-2 text-xs"></i> BPKB & STNK Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP Pemilik Baru</li>
+                                        <li class="flex items-start"><i class="fas fa-receipt text-slate-400 mt-1 mr-2 text-xs"></i> Kwitansi Pembelian</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Balik%20Nama%20BPKB" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Balik%20Nama%20BPKB" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -247,53 +261,70 @@
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border-2 border-yellow-400 relative flex flex-col">
                                 <div class="absolute top-0 right-0 bg-yellow-400 text-slate-800 text-xs font-bold px-3 py-1 rounded-bl-lg">POPULER</div>
                                 <div class="p-6 flex-grow">
-                                    <h3 class="text-lg font-bold text-slate-800 mb-2">SIM Baru (A/C)</h3>
-                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 350.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 1 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Tes kesehatan</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Foto & sidik jari</li>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">SIM A</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 850.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> FC KTP 3 Lembar</li>
+                                        <li class="flex items-start"><i class="fas fa-notes-medical text-slate-400 mt-1 mr-2 text-xs"></i> Foto Hadir</li>
+                                        
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20SIM%20Baru" target="_blank" class="block w-full text-center bg-yellow-400 text-slate-800 py-2 rounded-lg font-medium hover:bg-yellow-500 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20SIM%20Baru" target="_blank" class="block w-full text-center bg-yellow-400 text-slate-800 py-2 rounded-lg font-medium hover:bg-yellow-500 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 2 -->
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
                                 <div class="p-6 flex-grow">
-                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjangan SIM</h3>
-                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 250.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 1 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Tes kesehatan</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Update foto terbaru</li>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">SIM C</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 750.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> FC KTP 3 Lembar</li>
+                                        <li class="flex items-start"><i class="fas fa-notes-medical text-slate-400 mt-1 mr-2 text-xs"></i> Foto Hadir</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20SIM" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20SIM%20Baru" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                              <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjangan SIM</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 450.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> FC KTP 3 Lembar</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-notes-medical text-slate-400 mt-1 mr-2 text-xs"></i> Foto Hadir</li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-gray-50 border-t border-gray-100">
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20SIM" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 3 -->
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">SIM Internasional</h3>
-                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 450.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 3-5 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Berlaku di luar negeri</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Bantuan dokumen</li>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 2.500.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> SIM Nasional Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-passport text-slate-400 mt-1 mr-2 text-xs"></i> Paspor Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-camera text-slate-400 mt-1 mr-2 text-xs"></i> Pas Foto Terbaru</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20SIM%20Internasional" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20SIM%20Internasional" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Paspor Content -->
-                    <div id="paspor-content" class="tab-content hidden transition-all duration-300 fade-in">
+                    <!-- <div id="paspor-content" class="tab-content hidden transition-all duration-300 fade-in">
                         <div class="mb-6 border-b pb-4">
                             <h2 class="text-3xl font-bold text-slate-800 flex items-center">
                                 <i class="fas fa-passport text-yellow-500 mr-3 text-2xl"></i>
@@ -302,50 +333,117 @@
                             <p class="text-gray-500 mt-2">Jasa pembuatan dan perpanjangan paspor resmi</p>
                         </div>
                         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <!-- Card 1 -->
+                          
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">Paspor 24 Halaman</h3>
                                     <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 650.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 5-7 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Bantuan lengkap dokumen</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Antar jemput</li>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> E-KTP Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-users text-slate-400 mt-1 mr-2 text-xs"></i> Kartu Keluarga Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-file-contract text-slate-400 mt-1 mr-2 text-xs"></i> Akta Lahir/Ijazah/Buku Nikah</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Paspor%2024%20Halaman" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Paspor%2024%20Halaman" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
-                            <!-- Card 2 -->
+                           
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border-2 border-yellow-400 relative flex flex-col">
                                 <div class="absolute top-0 right-0 bg-yellow-400 text-slate-800 text-xs font-bold px-3 py-1 rounded-bl-lg">REKOMENDASI</div>
                                 <div class="p-6 flex-grow">
                                     <h3 class="text-lg font-bold text-slate-800 mb-2">Paspor 48 Halaman</h3>
                                     <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 850.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 5-7 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Ideal untuk traveler</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Antar jemput dokumen</li>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> E-KTP Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-users text-slate-400 mt-1 mr-2 text-xs"></i> Kartu Keluarga Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-file-contract text-slate-400 mt-1 mr-2 text-xs"></i> Akta Lahir/Ijazah/Buku Nikah</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Paspor%2048%20Halaman" target="_blank" class="block w-full text-center bg-yellow-400 text-slate-800 py-2 rounded-lg font-medium hover:bg-yellow-500 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Paspor%2048%20Halaman" target="_blank" class="block w-full text-center bg-yellow-400 text-slate-800 py-2 rounded-lg font-medium hover:bg-yellow-500 transition">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjangan Paspor</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 750.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-passport text-slate-400 mt-1 mr-2 text-xs"></i> Paspor Lama Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> E-KTP Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-info-circle text-slate-400 mt-1 mr-2 text-xs"></i> (Syarat: Tidak ubah data)</li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-gray-50 border-t border-gray-100">
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20Paspor" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Mutasi Content -->
+                    <div id="mutasi-content" class="tab-content hidden transition-all duration-300 fade-in">
+                        <div class="mb-6 border-b pb-4">
+                            <h2 class="text-3xl font-bold text-slate-800 flex items-center">
+                                <i class="fas fa-exchange-alt text-yellow-500 mr-3 text-2xl"></i>
+                                Layanan Mutasi
+                            </h2>
+                            <p class="text-gray-500 mt-2">Jasa mutasi, balik nama, dan pindah alamat kendaraan</p>
+                        </div>
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Card 1 -->
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Mutasi</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 1.500.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-file-alt text-slate-400 mt-1 mr-2 text-xs"></i> BPKB & STNK Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-search text-slate-400 mt-1 mr-2 text-xs"></i> Cek Fisik Kendaraan</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> FC KTP Pemilik Baru</li>
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-gray-50 border-t border-gray-100">
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Mutasi%20Kendaraan" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
+                                <div class="p-6 flex-grow">
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Balik Nama</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp.1.000.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-book text-slate-400 mt-1 mr-2 text-xs"></i>STNK Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-receipt text-slate-400 mt-1 mr-2 text-xs"></i> BPKB Asli</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP Asli Pemilik Baru</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> Materai 10.000</li>
+                                         <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> Cek Fisik Kendaraan </li>
+
+                                    </ul>
+                                </div>
+                                <div class="p-4 bg-gray-50 border-t border-gray-100">
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Balik%20Nama%20Mutasi" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                             <!-- Card 3 -->
                             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition border border-gray-100 flex flex-col">
                                 <div class="p-6 flex-grow">
-                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Perpanjangan Paspor</h3>
-                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 750.000</div>
-                                    <ul class="space-y-3 mb-6 text-sm">
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Proses 5-7 hari kerja</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Paspor lama wajib ada</li>
-                                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-0.5 mr-2"></i> Update data terbaru</li>
+                                    <h3 class="text-lg font-bold text-slate-800 mb-2">Pindah Alamat</h3>
+                                    <div class="text-2xl font-bold text-yellow-500 mb-4">Rp 1.200.000</div>
+                                    <div class="text-xs font-semibold text-gray-400 mb-2 uppercase tracking-wide">Persyaratan:</div>
+                                    <ul class="space-y-2 mb-6 text-sm text-gray-600">
+                                        <li class="flex items-start"><i class="fas fa-file-invoice text-slate-400 mt-1 mr-2 text-xs"></i> Surat Pindah (SKPWNI)</li>
+                                        <li class="flex items-start"><i class="fas fa-id-card text-slate-400 mt-1 mr-2 text-xs"></i> KTP & KK Baru</li>
+                                        <li class="flex items-start"><i class="fas fa-car text-slate-400 mt-1 mr-2 text-xs"></i> Cek Fisik Kendaraan</li>
                                     </ul>
                                 </div>
                                 <div class="p-4 bg-gray-50 border-t border-gray-100">
-                                    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20layanan%20Perpanjangan%20Paspor" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
+                                    <a href="https://wa.me/6281219331327?text=Halo,%20saya%20tertarik%20layanan%20Pindah%20Alamat" target="_blank" class="block w-full text-center bg-slate-800 text-white py-2 rounded-lg font-medium hover:bg-slate-700 transition">Pesan Sekarang</a>
                                 </div>
                             </div>
                         </div>
@@ -459,7 +557,7 @@
     </footer>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50 animate-bounce-slow">
+    <a href="https://wa.me/6281219331327" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition z-50 animate-bounce-slow">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
